@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "myHelvetica";
+  src: url(../Fonts/Helvetica.ttf), url(../Fonts/Helvetica.otf);
+}
+
+* {
+  font-family: Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+/*# sourceMappingURL=main.css.map */
