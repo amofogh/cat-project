@@ -1,1 +1,13 @@
 // // multi code's
+
+.font-size-sm {
+  font-size: 14px !important;
+}
+
+.btn-none {
+  border: none;
+  background: transparent;
+  &:focus {
+    outline: none;
+  }
+}

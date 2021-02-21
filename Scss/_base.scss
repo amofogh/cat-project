@@ -3,7 +3,76 @@
   font-family: "myHelvetica";
   src: url(../Fonts/Helvetica.ttf), url(../Fonts/Helvetica.otf);
 }
+$color-primary: rgb(80, 80, 80);
+$color-primary-opacity-3: rgba(80, 80, 80,.3);
+$color-primary-opacity-5: rgba(80, 80, 80,.5);
+$color-primary-opacity-8: rgba(80, 80, 80,.8);
+$color-primary-opacity-9: rgba(80, 80, 80,.9);
+
+$color-Lg: rgb(255, 228, 196);
+$color-lg-opacity-5: rgba(225, 228, 196,.5);
+$color-lg-opacity-8: rgba(225, 228, 196,.8);
+$color-lg-opacity-9: rgba(225, 228, 196,.9);
+$color-lg-opacity-3: rgba(225, 228, 196,.3);
+
 
 * {
   font-family: Helvetica, sans-serif ;
+  margin: 0 ;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  transition: color .3s ease;
+  
+}
+
+ul{
+  list-style: none;
+  li {
+    display: inline;
+  }
+}
+
+button{
+  cursor: pointer;
+}
+
+// icons color
+
+.linkedin{
+  transition: all .3s ease;
+  &:hover{
+      color: #0075b5;
+  }
+}
+
+.youtube{
+  transition: all .3s ease;
+  &:hover{
+      color: #ce2c26;
+  }
+}
+
+.instagram{
+  transition: all .3s ease;
+  &:hover{
+      color: #bc1888;
+    
+  }
+}
+
+.facebook{
+  transition: all .3s ease;
+  &:hover{
+      color: #395ca1;
+  }
+}
+
+.twitter{
+  transition: all .3s ease;
+  &:hover{
+      color: #1DA1F2;
+  }
 }
