@@ -28,6 +28,11 @@ $color-lg-opacity-3: rgba(225, 228, 196, 0.3);
   position: absolute;
   right: 0;
   bottom: 50;
+
+  @media (max-width: 1320px) {
+    width: 19rem;
+    margin-right: 1rem;
+  }
 }
 
 @mixin Flex-Center {
