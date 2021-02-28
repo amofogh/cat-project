@@ -835,7 +835,7 @@ main .cat-available .cat-available-cards .row .cat-cards {
   }
 }
 
-@media (max-width: (min-width: 960.1px)) {
+@media (max-width: 1320px) and (min-width: 960.1px) {
   main .cat-available .cat-available-cards .row .cat-cards:nth-child(odd) {
     margin-right: 2.5rem;
     margin-left: 5rem;

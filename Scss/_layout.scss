@@ -498,7 +498,7 @@ main {
       @media (max-width: 960px) {
         display: none;
       }
-      
+
       img {
         display: block;
         margin: 0 auto;
@@ -549,7 +549,7 @@ main {
             margin-left: 2.5rem;
             margin-bottom: 5rem;
           }
-          @media (max-width: 1320px and (min-width: 960.1px)) {
+          @media ( max-width:1320px) and (min-width: 960.1px ) {
             &:nth-child(odd) {
               margin-right: 2.5rem;
               margin-left: 5rem;
