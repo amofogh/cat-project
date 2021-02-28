@@ -12,8 +12,8 @@
 
 a {
   text-decoration: none;
-  -webkit-transition: color .3s ease;
-  transition: color .3s ease;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 ul {
@@ -29,8 +29,8 @@ button {
 }
 
 .linkedin {
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .linkedin:hover {
@@ -38,8 +38,8 @@ button {
 }
 
 .youtube {
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .youtube:hover {
@@ -47,8 +47,8 @@ button {
 }
 
 .instagram {
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .instagram:hover {
@@ -56,8 +56,8 @@ button {
 }
 
 .facebook {
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .facebook:hover {
@@ -65,12 +65,12 @@ button {
 }
 
 .twitter {
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .twitter:hover {
-  color: #1DA1F2;
+  color: #1da1f2;
 }
 
 .font-size-sm {
@@ -84,6 +84,14 @@ button {
 
 .btn-none:focus {
   outline: none;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
 }
 
 header {
@@ -653,5 +661,228 @@ header .angle-down {
     background: url(../Images/bg-sm/14.jpg) center no-repeat;
     height: 360px;
   }
+}
+
+main .cat-available {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5rem 0;
+}
+
+main .cat-available .header-cat-available {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: center;
+          flex-direction: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem 0;
+  margin-right: 4rem;
+  position: relative;
+}
+
+main .cat-available .header-cat-available::after {
+  content: "Cats Available";
+  display: block;
+  color: rgba(80, 80, 80, 0.8);
+  border-bottom: 2px solid rgba(80, 80, 80, 0.8);
+  text-align: right;
+  width: 25rem;
+  margin-right: 10rem;
+  padding-bottom: 0.5rem;
+  position: absolute;
+  right: 0;
+  bottom: 50;
+}
+
+main .cat-available .header-cat-available img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+main .cat-available .cat-available-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .cat-available .cat-available-cards .header-cat-available-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #505050;
+  margin: 3rem 0;
+}
+
+main .cat-available .cat-available-cards .header-cat-available-cards h3 {
+  font-size: 2rem;
+}
+
+main .cat-available .cat-available-cards .header-cat-available-cards p {
+  font-size: 1.5rem;
+}
+
+main .cat-available .cat-available-cards .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: center;
+          flex-direction: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin: 3rem 0;
+  margin-bottom: 6rem;
+}
+
+main .cat-available .cat-available-cards .row .cat-cards {
+  position: relative;
+  padding-bottom: 3rem;
+  border: 1px solid #eeeeee;
+  width: 20rem;
+  margin-right: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .cat-available .cat-available-cards .row .cat-cards:last-child {
+  margin-right: 0;
+}
+
+main .cat-available .cat-available-cards .row .cat-cards img {
+  max-height: 50%;
+}
+
+main .cat-available .cat-available-cards .row .cat-cards .caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1rem;
+  line-height: 1.8rem;
+}
+
+main .cat-available .cat-available-cards .row .cat-cards .caption h4 {
+  font-size: 1.3rem;
+}
+
+main .cat-available .cat-available-cards .row .cat-cards .caption p {
+  color: #747474;
+}
+
+main .cat-available .cat-available-cards .row .cat-cards button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin: 0 auto;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  border: 1px solid #eeeeee;
+  color: black;
+  background-color: #fff;
+  padding: 1rem 3rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+main .cat-available .cat-available-cards .row .cat-cards button:hover {
+  background-color: black;
+  color: #fff;
+}
+
+main .cat-available .cat-available-cards .btn-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: center;
+          flex-direction: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  background: transparent;
+  border: 1px solid #717171;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+main .cat-available .cat-available-cards .btn-all:hover {
+  color: #fff;
+  background: black;
 }
 /*# sourceMappingURL=main.css.map */

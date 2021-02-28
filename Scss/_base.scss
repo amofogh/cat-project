@@ -4,75 +4,106 @@
   src: url(../Fonts/Helvetica.ttf), url(../Fonts/Helvetica.otf);
 }
 $color-primary: rgb(80, 80, 80);
-$color-primary-opacity-3: rgba(80, 80, 80,.3);
-$color-primary-opacity-5: rgba(80, 80, 80,.5);
-$color-primary-opacity-8: rgba(80, 80, 80,.8);
-$color-primary-opacity-9: rgba(80, 80, 80,.9);
+$color-primary-opacity-3: rgba(80, 80, 80, 0.3);
+$color-primary-opacity-5: rgba(80, 80, 80, 0.5);
+$color-primary-opacity-8: rgba(80, 80, 80, 0.8);
+$color-primary-opacity-9: rgba(80, 80, 80, 0.9);
 
 $color-Lg: rgb(255, 228, 196);
-$color-lg-opacity-5: rgba(225, 228, 196,.5);
-$color-lg-opacity-8: rgba(225, 228, 196,.8);
-$color-lg-opacity-9: rgba(225, 228, 196,.9);
-$color-lg-opacity-3: rgba(225, 228, 196,.3);
+$color-lg-opacity-5: rgba(225, 228, 196, 0.5);
+$color-lg-opacity-8: rgba(225, 228, 196, 0.8);
+$color-lg-opacity-9: rgba(225, 228, 196, 0.9);
+$color-lg-opacity-3: rgba(225, 228, 196, 0.3);
 
+@mixin AfterImg($Content) {
+  content: $Content;
+  display: block;
+  color: $color-primary-opacity-8;
+  border-bottom: 2px solid $color-primary-opacity-8;
+  text-align: right;
+  width: 25rem;
+  margin-right: 10rem;
+  padding-bottom: 0.5rem;
+
+  position: absolute;
+  right: 0;
+  bottom: 50;
+}
+
+@mixin Flex-Center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin Flex-Column-Center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin Flex($direction: center , $justify : center , $align : center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
 
 * {
-  font-family: Helvetica, sans-serif ;
-  margin: 0 ;
+  font-family: Helvetica, sans-serif;
+  margin: 0;
   box-sizing: border-box;
 }
 
-a{
+a {
   text-decoration: none;
-  transition: color .3s ease;
-  
+  transition: color 0.3s ease;
 }
 
-ul{
+ul {
   list-style: none;
   li {
     display: inline;
   }
 }
 
-button{
+button {
   cursor: pointer;
 }
 
 // icons color
 
-.linkedin{
-  transition: all .3s ease;
-  &:hover{
-      color: #0075b5;
+.linkedin {
+  transition: all 0.3s ease;
+  &:hover {
+    color: #0075b5;
   }
 }
 
-.youtube{
-  transition: all .3s ease;
-  &:hover{
-      color: #ce2c26;
+.youtube {
+  transition: all 0.3s ease;
+  &:hover {
+    color: #ce2c26;
   }
 }
 
-.instagram{
-  transition: all .3s ease;
-  &:hover{
-      color: #bc1888;
-    
+.instagram {
+  transition: all 0.3s ease;
+  &:hover {
+    color: #bc1888;
   }
 }
 
-.facebook{
-  transition: all .3s ease;
-  &:hover{
-      color: #395ca1;
+.facebook {
+  transition: all 0.3s ease;
+  &:hover {
+    color: #395ca1;
   }
 }
 
-.twitter{
-  transition: all .3s ease;
-  &:hover{
-      color: #1DA1F2;
+.twitter {
+  transition: all 0.3s ease;
+  &:hover {
+    color: #1da1f2;
   }
 }
