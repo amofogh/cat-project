@@ -94,6 +94,33 @@ button {
   height: 100%;
 }
 
+.btn-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: center;
+          flex-direction: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  background: transparent;
+  border: 1px solid #717171;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.btn-all:hover {
+  color: #fff;
+  background: black;
+}
+
 header {
   position: relative;
   display: -webkit-box;
@@ -789,10 +816,7 @@ main .cat-available .cat-available-cards .row {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 5rem;
-  margin-right: 5rem;
-  margin: 3rem 0;
-  margin-bottom: 6rem;
+  margin: 3rem 5rem 4rem 5rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -907,8 +931,8 @@ main .cat-available .cat-available-cards .row .cat-cards button {
   font-weight: 700;
   font-size: 0.8rem;
   text-transform: uppercase;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 main .cat-available .cat-available-cards .row .cat-cards button:hover {
@@ -916,7 +940,25 @@ main .cat-available .cat-available-cards .row .cat-cards button:hover {
   color: #fff;
 }
 
-main .cat-available .cat-available-cards .btn-all {
+main .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5rem 0;
+  background: #f5f5f5;
+}
+
+main .gallery .header-gallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -930,16 +972,91 @@ main .cat-available .cat-available-cards .btn-all {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem;
-  background: transparent;
-  border: 1px solid #717171;
-  color: black;
-  font-size: 1.5rem;
-  font-weight: 600;
+  margin: 2rem 0;
+  margin-right: 4rem;
+  position: relative;
 }
 
-main .cat-available .cat-available-cards .btn-all:hover {
-  color: #fff;
-  background: black;
+main .gallery .header-gallery::after {
+  content: "Our Gallery";
+  display: block;
+  color: rgba(80, 80, 80, 0.8);
+  border-bottom: 2px solid rgba(80, 80, 80, 0.8);
+  text-align: right;
+  width: 25rem;
+  margin-right: 10rem;
+  padding-bottom: 0.5rem;
+  position: absolute;
+  right: 0;
+  bottom: 50;
+}
+
+@media (max-width: 1320px) {
+  main .gallery .header-gallery::after {
+    width: 19rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 960px) {
+  main .gallery .header-gallery {
+    display: none;
+  }
+}
+
+main .gallery .header-gallery img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+main .gallery .content-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .gallery .content-gallery h3 {
+  font-size: 2rem;
+  color: #505050;
+}
+
+main .gallery .content-gallery p {
+  color: #505050;
+  font-size: 1.5rem;
+}
+
+main .gallery .content-gallery .photo-demo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: auto;
+  gap: 1rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}
+
+main .gallery .content-gallery .photo-demo .first-photo-demo {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+main .gallery .content-gallery .photo-demo .btn-all {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 3;
+  margin-top: 2rem;
 }
 /*# sourceMappingURL=main.css.map */
