@@ -513,39 +513,21 @@ main {
         color: $color-primary;
 
         margin: 3rem 0;
-        h3 {
-          font-size: 2rem;
-        }
-        p {
-          font-size: 1.5rem;
-          text-align: center;
-        }
       }
       .row {
-        @include Flex();
-        margin: 3rem 5rem 4rem 5rem;
-        flex-wrap: wrap;
-        .cat-cards {
-          position: relative;
-          padding-bottom: 3rem;
-          border: 1px solid #eeeeee;
-          width: 20rem;
-          margin-right: 5rem;
-          @include Flex(column);
-
-          @media (min-width: 1320px) {
-            margin-bottom: 5rem;
-            &:nth-child(3),
-            &:nth-child(6) {
-              margin-right: 0;
-            }
-          }
-
+        .cards {
           @media (max-width: 1320px) {
             width: calc(50% - 10rem);
-            margin-left: 2.5rem;
-            margin-bottom: 5rem;
           }
+
+          @media (max-width: 960px) {
+            width: calc(50% - 2rem);
+          }
+
+          @media (max-width: 540px) {
+            width: 100%;
+          }
+
           @media (max-width: 1320px) and (min-width: 960.1px) {
             &:nth-child(odd) {
               margin-right: 2.5rem;
@@ -553,10 +535,6 @@ main {
             }
           }
           @media (max-width: 960px) {
-            margin-left: 1rem;
-            margin-right: 1rem;
-            width: calc(50% - 2rem);
-
             &:nth-child(5),
             &:nth-child(6) {
               display: none;
@@ -564,49 +542,10 @@ main {
           }
 
           @media (max-width: 540px) {
-            width: 100%;
             &:nth-child(4),
             &:nth-child(5),
             &:nth-child(6) {
               display: none;
-            }
-          }
-
-          img {
-            max-height: 50%;
-            margin-bottom: 1rem;
-          }
-          .caption {
-            @include Flex(column);
-            padding: 0 1rem;
-            line-height: 1.8rem;
-            h4 {
-              font-size: 1.3rem;
-            }
-            p {
-              color: #747474;
-            }
-          }
-
-          button {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            margin: 0 auto;
-            transform: translate(-50%, 50%);
-
-            border: 1px solid #eeeeee;
-            color: black;
-            background-color: #fff;
-            padding: 1rem 3rem;
-            font-weight: 700;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-
-            &:hover {
-              background-color: black;
-              color: #fff;
             }
           }
         }
@@ -645,16 +584,6 @@ main {
     .content-gallery {
       @include Flex(column);
 
-      h3 {
-        font-size: 2rem;
-        color: #505050;
-      }
-
-      p {
-        color: #505050;
-        font-size: 1.5rem;
-      }
-
       .photo-demo {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -663,14 +592,152 @@ main {
 
         margin-top: 6rem;
         margin-bottom: 3rem;
+
+        @media (max-width: 1320px) {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 960px) {
+          column-gap: 0;
+          margin: 6rem 0 3rem 1rem;
+        }
+
+        @media (max-width: 540px) {
+          grid-template-columns: 1fr;
+        }
+        .Small-pics {
+          @media (max-width: 960px) {
+            width: calc(100% - 1rem);
+          }
+        }
+
+        .last-child {
+          @media (max-width: 540px) {
+            display: none;
+          }
+        }
+
         .first-photo-demo {
           grid-row-start: 1;
           grid-row-end: 3;
+          @media (max-width: 960px) {
+            display: none;
+          }
         }
-        .btn-all{
+        .btn-all {
           grid-column-start: 2;
           grid-column-end: 3;
           margin-top: 2rem;
+        }
+      }
+    }
+  }
+
+  .blog {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 0;
+    background: #fff;
+    .header-blog {
+      @include Flex();
+
+      margin: 2rem 0;
+      margin-right: 4rem;
+      position: relative;
+      &::after {
+        @include AfterImg("Our Blog");
+      }
+
+      @media (max-width: 960px) {
+        display: none;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+      }
+    }
+
+    .content-blog {
+      @include Flex(column);
+      color: $color-primary;
+
+      margin: 3rem 0;
+    }
+
+    .row {
+      @media (max-width: 1320px) {
+        margin: 3rem 0rem 3rem 1rem;
+      }
+
+      .cards {
+        border: none;
+        @media (max-width: 1320px) {
+          width: 17rem;
+          margin-left: 0.5rem;
+          margin-right: 2rem;
+        }
+
+        @media (max-width: 960px) and (min-width: 740.1px) {
+          &:nth-child(3) {
+            display: none;
+          }
+        }
+
+        @media (max-width: 960px) {
+          margin-left: 1rem;
+          margin-right: 1rem;
+        }
+
+        @media (max-width: 740px) {
+          width: 100%;
+          margin-bottom: 1rem;
+          padding-bottom: 2rem;
+        }
+
+        .gp-img-cards {
+          position: relative;
+
+          .date-box {
+            background: #b0c83e;
+            width: 3rem;
+            height: 3rem;
+            color: #fff;
+            @include Flex(column);
+            text-align: center;
+            margin-bottom: 1rem;
+            position: absolute;
+            bottom: 0;
+            transform: translate(-50%, 50%);
+            left: 50%;
+          }
+        }
+
+        .caption {
+          margin-top: 2.5rem;
+          height: 10rem;
+          @media (max-width: 740px) {
+            margin-top: 1.5rem;
+            width: 100%;
+          }
+
+          p:first-child {
+            color: #1bcdff;
+            width: 100%;
+          }
+          h3 {
+            width: 100%;
+
+            a {
+              color: black;
+            }
+            p {
+              color: gray;
+            }
+          }
         }
       }
     }
