@@ -3,6 +3,11 @@
   src: url(../Fonts/Helvetica.ttf), url(../Fonts/Helvetica.otf);
 }
 
+@font-face {
+  font-family: "Montserrat";
+  src: url(../Fonts/Montserrat.ttf);
+}
+
 * {
   font-family: Helvetica, sans-serif;
   margin: 0;
@@ -251,6 +256,62 @@ button {
   text-align: center;
 }
 
+.social-icon {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 960px) {
+  .social-icon {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-left: 1rem;
+  }
+}
+
+.social-icon .icons-style {
+  color: #505050;
+  padding: 1.5rem 0;
+  cursor: pointer;
+}
+
+.social-icon .icons-style:focus {
+  outline: none;
+}
+
+.social-icon .icons-style i {
+  width: 1rem;
+  height: 1rem;
+}
+
+.c-white {
+  color: #fff;
+}
+
+.c-gray {
+  color: #cfcfcf;
+}
+
+.bg-white {
+  background: #fff;
+}
+
 header {
   position: relative;
   display: -webkit-box;
@@ -374,55 +435,6 @@ header .left-box .three-lines .third-line {
   height: 3px;
   background: #505050;
   border-radius: 5px;
-}
-
-header .social-media .social-icon,
-header .left-box .social-icon {
-  height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-@media (max-width: 960px) {
-  header .social-media .social-icon,
-  header .left-box .social-icon {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    margin-left: 1rem;
-  }
-}
-
-header .social-media .social-icon .icons-style,
-header .left-box .social-icon .icons-style {
-  color: #505050;
-  padding: 1.5rem 0;
-  cursor: pointer;
-}
-
-header .social-media .social-icon .icons-style:focus,
-header .left-box .social-icon .icons-style:focus {
-  outline: none;
-}
-
-header .social-media .social-icon .icons-style i,
-header .left-box .social-icon .icons-style i {
-  width: 1rem;
-  height: 1rem;
 }
 
 header .right-box {
@@ -1307,5 +1319,224 @@ main .blog .row .cards .caption h3 a {
 
 main .blog .row .cards .caption h3 p {
   color: gray;
+}
+
+main .contact-us {
+  margin: 2rem 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .contact-us .img-contact-us {
+  width: calc(70% - 3rem);
+  position: relative;
+}
+
+main .contact-us .img-contact-us h2 {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  margin-left: 3rem;
+  line-height: 3.5rem;
+  font-size: 2.5rem;
+  font-family: "Montserrat" , sans-serif;
+}
+
+main .contact-us .img-contact-us h2 .and-size {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: center;
+          flex-direction: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-align: center;
+}
+
+main .contact-us .img-contact-us p {
+  color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-left: 3rem;
+  margin-bottom: 2rem;
+}
+
+main .contact-us .img-contact-us img {
+  width: 100%;
+}
+
+main .contact-us .info-contact-us {
+  width: 30%;
+  margin-left: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  color: #505050;
+}
+
+main .contact-us .info-contact-us .follow-us h3 {
+  margin-bottom: 2rem;
+}
+
+main .contact-us .info-contact-us .follow-us .social-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .contact-us .info-contact-us .follow-us .social-icon a::after {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+main .contact-us .info-contact-us .follow-us .social-icon .icons-style {
+  background: #505050;
+  color: #fff;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: center;
+          flex-direction: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+main .contact-us .info-contact-us .follow-us .social-icon .icons-style:hover i {
+  color: #fff;
+  z-index: 1;
+}
+
+main .contact-us .info-contact-us .follow-us .social-icon .instagram-link:hover::after {
+  background: #bc1888;
+}
+
+main .contact-us .info-contact-us .follow-us .social-icon .linkedin-link:hover::after {
+  background: #0075b5;
+}
+
+main .contact-us .info-contact-us .follow-us .social-icon .facebook-link:hover::after {
+  background: #395ca1;
+}
+
+main .contact-us .info-contact-us .follow-us .social-icon .twitter-link:hover::after {
+  background: #1da1f2;
+}
+
+main .contact-us .info-contact-us .follow-us .social-icon .youtube-link:hover::after {
+  background: #ce2c26;
+}
+
+main .contact-us .info-contact-us .Contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+main .contact-us .info-contact-us .Contacts h3 {
+  margin-bottom: 2rem;
+}
+
+main .contact-us .info-contact-us .Contacts a {
+  color: #983a42;
+  margin-bottom: 1rem;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+main .contact-us .info-contact-us .Contacts a:hover {
+  color: #505050;
+}
+
+main .contact-us .info-contact-us .location h3 {
+  margin-bottom: 2rem;
+}
+
+main .contact-us .info-contact-us .location p {
+  line-height: 1.5rem;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: center;
+          flex-direction: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3rem 0;
+}
+
+footer p {
+  color: #505050;
 }
 /*# sourceMappingURL=main.css.map */

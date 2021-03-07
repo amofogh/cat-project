@@ -3,6 +3,12 @@
   font-family: "myHelvetica";
   src: url(../Fonts/Helvetica.ttf), url(../Fonts/Helvetica.otf);
 }
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(../Fonts/Montserrat.ttf)
+}
+
 $color-primary: rgb(80, 80, 80);
 $color-primary-opacity-3: rgba(80, 80, 80, 0.3);
 $color-primary-opacity-5: rgba(80, 80, 80, 0.5);
@@ -47,7 +53,7 @@ $color-lg-opacity-3: rgba(225, 228, 196, 0.3);
   justify-content: center;
   align-items: center;
 }
-@mixin Flex($direction: center , $justify : center , $align : center) {
+@mixin Flex($direction: center, $justify: center, $align: center) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
