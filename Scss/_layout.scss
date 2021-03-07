@@ -515,16 +515,20 @@ main {
         margin: 3rem 0;
       }
       .row {
+        // display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 3rem;
         .cards {
           @media (max-width: 1320px) {
             width: calc(50% - 10rem);
           }
 
           @media (max-width: 960px) {
-            width: calc(50% - 2rem);
+            width: calc(50% - 5rem);
           }
 
-          @media (max-width: 540px) {
+          @media (max-width: 740px) {
             width: 100%;
           }
 
@@ -669,6 +673,7 @@ main {
     }
 
     .row {
+      margin-bottom: 0;
       @media (max-width: 1320px) {
         margin: 3rem 0rem 3rem 1rem;
       }
