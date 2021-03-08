@@ -135,19 +135,19 @@ header {
 
       ul {
         li {
-          a {
-            margin: 0 1rem;
-            color: $color-primary-opacity-5;
+          cursor: pointer;
+
+          margin: 0 1rem;
+          color: $color-primary-opacity-5;
+
+          &:hover {
+            color: $color-primary-opacity-8;
+          }
+          @media (max-width: 960px) {
+            color: rgba(0, 0, 0, 0.5);
 
             &:hover {
-              color: $color-primary-opacity-8;
-            }
-            @media (max-width: 960px) {
-              color: rgba(0, 0, 0, 0.5);
-
-              &:hover {
-                color: rgba(0, 0, 0, 0.8);
-              }
+              color: rgba(0, 0, 0, 0.8);
             }
           }
         }
@@ -274,6 +274,7 @@ header {
     height: 1rem;
     color: black;
     bottom: 1rem;
+    cursor: pointer;
     @media (max-width: 960px) {
       color: #f5b973;
     }
@@ -451,6 +452,29 @@ header {
   }
 }
 
+.go-to-top {
+  @include Flex(column);
+  text-align: center;
+  position: fixed;
+  bottom: 3rem;
+  right: 2.5rem;
+  z-index: 100;
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: #ffe4c4;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: none;
+  &:hover {
+    background: #9c9c9c;
+  }
+  i {
+    color: #001b3b;
+    font-size: 1.5rem;
+  }
+}
 // ------main-------
 
 main {
@@ -726,9 +750,31 @@ main {
   .contact-us {
     margin: 2rem 5rem;
     display: flex;
+    @media (max-width: 960px) {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 540px) {
+      margin: 1rem 1rem;
+    }
+
+    h2:first-child {
+      text-align: center;
+      color: #505050;
+      margin: 2rem 0;
+      display: none;
+      @media (max-width: 540px) {
+        display: block;
+      }
+    }
+
     .img-contact-us {
       width: calc(70% - 3rem);
       position: relative;
+
+      @media (max-width: 960px) {
+        width: 100%;
+      }
 
       h2 {
         position: absolute;
@@ -738,8 +784,15 @@ main {
         margin-left: 3rem;
         line-height: 3.5rem;
         font-size: 2.5rem;
-        font-family: "Montserrat" , sans-serif;
-        .and-size{
+        font-family: "Montserrat", sans-serif;
+        @media (max-width: 540px) {
+          display: none;
+        }
+        @media (max-width: 1320px) {
+          font-size: 1.3rem;
+        }
+
+        .Span-size {
           width: 3rem;
           height: 3rem;
           border-radius: 50%;
@@ -747,16 +800,18 @@ main {
           display: inline-flex;
           text-align: center;
         }
-
       }
 
-      p{
+      p {
         color: #fff;
         position: absolute;
         left: 0;
         bottom: 0;
         margin-left: 3rem;
         margin-bottom: 2rem;
+        @media (max-width: 540px) {
+          display: none;
+        }
       }
 
       img {
@@ -768,13 +823,46 @@ main {
       width: 30%;
       margin-left: 3rem;
 
+      @media (max-width: 960px) {
+        width: 100%;
+        margin-left: 0;
+        flex-direction: row;
+      }
+
+      @media (max-width: 740px) {
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 540px) {
+        flex-direction: column-reverse;
+      }
+
       @include Flex(column, space-evenly, start);
       color: #505050;
-      .follow-us {
-        h3 {
-          margin-bottom: 2rem;
+
+      h3 {
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+        @media (max-width: 960px) {
+          margin-bottom: 1rem;
+          margin-top: 1rem;
         }
+      }
+      .follow-us {
         .social-icon {
+          @media (max-width: 960px) {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            margin-left: 0;
+          }
+
+          @media (max-width: 740px) {
+            grid-template-columns: repeat(5, 1fr);
+          }
+
           a {
             &::after {
               content: " ";
@@ -808,34 +896,85 @@ main {
           }
 
           // hover on circles
-          .instagram-link:hover::after {
-            background: #bc1888;
+          .instagram-link {
+            &:hover::after {
+              background: #bc1888;
+            }
+            @media (max-width: 740px) {
+              background: #bc1888;
+              &:hover::after {
+                background: #505050;
+              }
+            }
           }
-          .linkedin-link:hover::after {
-            background: #0075b5;
+          .linkedin-link {
+            &:hover::after {
+              background: #0075b5;
+            }
+            @media (max-width: 740px) {
+              background: #0075b5;
+              &:hover::after {
+                background: #505050;
+              }
+            }
           }
-          .facebook-link:hover::after {
-            background: #395ca1;
+          .facebook-link {
+            &:hover::after {
+              background: #395ca1;
+            }
+            @media (max-width: 740px) {
+              background: #395ca1;
+              &:hover::after {
+                background: #505050;
+              }
+            }
           }
-          .twitter-link:hover::after {
-            background: #1da1f2;
+          .twitter-link {
+            &:hover::after {
+              background: #1da1f2;
+            }
+            @media (max-width: 740px) {
+              background: #1da1f2;
+              &:hover::after {
+                background: #505050;
+              }
+            }
           }
-          .youtube-link:hover::after {
-            background: #ce2c26;
+          .youtube-link {
+            &:hover::after {
+              background: #ce2c26;
+            }
+            @media (max-width: 740px) {
+              background: #ce2c26;
+              &:hover::after {
+                background: #505050;
+              }
+            }
           }
         }
       }
 
       .Contacts {
         @include Flex(column, start, start);
+        @media (max-width: 960px) {
+          margin: 0 1rem;
+        }
+        @media (max-width: 740px) {
+          margin: 0;
+          width: 50%;
+        }
 
-        h3 {
-          margin-bottom: 2rem;
+        @media (max-width: 540px) {
+          width: 100%;
         }
 
         a {
           color: #983a42;
           margin-bottom: 1rem;
+
+          @media (max-width: 960px) {
+            margin-bottom: 1rem;
+          }
 
           transition: color 0.3s ease;
           &:hover {
@@ -845,10 +984,13 @@ main {
       }
 
       .location {
-        h3 {
-          margin-bottom: 2rem;
+        @media (max-width: 740px) {
+          width: 50%;
         }
 
+        @media (max-width: 540px) {
+          width: 100%;
+        }
         p {
           line-height: 1.5rem;
         }
@@ -862,5 +1004,6 @@ footer {
   margin: 3rem 0;
   p {
     color: #505050;
+    text-align: center;
   }
 }

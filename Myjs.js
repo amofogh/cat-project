@@ -12,38 +12,39 @@ var imagesXxl = [
   "Images/bg-xxl/1.jpg",
   "Images/bg-xxl/2.jpg",
   "Images/bg-xxl/3.jpg",
-  "Images/bg-xxl/4.jpg"
+  "Images/bg-xxl/4.jpg",
 ];
 var imagesXL = [
   "Images/bg-xl/1.jpg",
   "Images/bg-xl/2.jpg",
   "Images/bg-xl/3.jpg",
-  "Images/bg-xl/4.jpg"
+  "Images/bg-xl/4.jpg",
 ];
 var imagesLg = [
   "Images/bg-lg/5.jpg",
   "Images/bg-lg/6.jpg",
   "Images/bg-lg/7.jpg",
-  "Images/bg-lg/8.jpg"
+  "Images/bg-lg/8.jpg",
 ];
 var imagesMd = [
   "Images/bg-md/9.jpg",
   "Images/bg-md/10.jpg",
   "Images/bg-md/11.jpg",
-  "Images/bg-md/12.jpg"
+  "Images/bg-md/12.jpg",
 ];
 var imagesSm = [
   "Images/bg-sm/13.jpg",
   "Images/bg-sm/14.jpg",
   "Images/bg-sm/15.jpg",
-  "Images/bg-sm/16.jpg"
+  "Images/bg-sm/16.jpg",
 ];
+
 var Numbers = [1, 2, 3, 4];
 
 var slides = document.getElementById("slide-show");
 var Counter = document.getElementById("counter");
 
-function ChangeBg(Imagepack , time_Second ){
+function ChangeBg(Imagepack, time_Second) {
   var ImgCounter = 0;
   setInterval(function () {
     slides.style.backgroundImage = "url(" + Imagepack[ImgCounter] + ")";
@@ -57,10 +58,9 @@ function ChangeBg(Imagepack , time_Second ){
       } else {
         slides.style.backgroundPosition = "left top";
       }
-    }
-    else{
-    slides.style.backgroundPositionX = "left";
-    slides.style.backgroundPositionY = "center";
+    } else {
+      slides.style.backgroundPositionX = "left";
+      slides.style.backgroundPositionY = "center";
     }
     ImgCounter = ImgCounter + 1;
     if (ImgCounter == Imagepack.length) {
@@ -70,15 +70,15 @@ function ChangeBg(Imagepack , time_Second ){
 }
 
 if (mediaXxl.matches) {
-  ChangeBg(imagesXxl , 5);
+  ChangeBg(imagesXxl, 5);
 } else if (mediaXl.matches) {
-  ChangeBg(imagesXL , 5);
-}else if (mediaLg.matches) {
-  ChangeBg(imagesLg , 5);
+  ChangeBg(imagesXL, 5);
+} else if (mediaLg.matches) {
+  ChangeBg(imagesLg, 5);
 } else if (mediaMd.matches) {
-  ChangeBg(imagesMd , 5);
-}else if (mediaSm.matches) {
-  ChangeBg(imagesSm , 5);
+  ChangeBg(imagesMd, 5);
+} else if (mediaSm.matches) {
+  ChangeBg(imagesSm, 5);
 } else {
   console.log("Not found");
 }
@@ -90,7 +90,7 @@ if (mediaXxl.matches) {
   i+= n;
 } */
 
-// hide and show social boxes in left header and move left header to left
+// hide and show social boxes in left header and move right header to left
 
 var SocialIcon = document.getElementsByClassName("social-icon")[0];
 var HeaderContent = document.getElementsByClassName("header-content")[0];
@@ -162,4 +162,40 @@ function NavbarHide(...Element) {
 function NavbarShow(...Element) {
   Element[0].style.display = "flex";
   Element[1].style.display = "none";
+}
+
+// // scroll to
+
+function ScrollTo(ClassName) {
+  let DomForScroll = document.getElementsByClassName(ClassName)[0];
+
+  DomForScroll.scrollIntoView({
+    behavior: "smooth",
+  });
+}
+
+// // go to top
+
+var GOTOTopBtn = document.getElementsByClassName("go-to-top")[0];
+var mydiv = document.getElementsByClassName("cat-available")[0];
+
+document.body.onscroll(scrollFunction());
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > mydiv.offsetTop ||
+    document.documentElement.scrollTop > mydiv.offsetTop
+  ) {
+    GOTOTopBtn.style.display = "flex";
+  } else {
+    GOTOTopBtn.style.display = "none";
+  }
+}
+
+function GoToTop(){
+  document.body.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+
 }

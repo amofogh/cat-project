@@ -15,7 +15,11 @@
     />
   </head>
 
-  <body>
+  <body onscroll="scrollFunction()">
+    <div class="go-to-top" onclick="GoToTop()">
+      <i class="fas fa-angle-up"></i>
+    </div>
+
     <header id="slide-show">
       <section class="left-box social-media">
         <div class="three-lines">
@@ -49,25 +53,20 @@
         <nav class="header-nav">
           <h2 class="Mybrand"><a href="#"> Cat</a></h2>
           <ul class="navbar-md">
-            <li>
-              <a href="#" class="font-size-sm">Cats available</a>
+            <li class="font-size-sm" onclick="ScrollTo('cat-available')">
+              Cats available
             </li>
-            <li>
-              <a href="#" class="font-size-sm">Gallery</a>
+            <li class="font-size-sm" onclick="ScrollTo('gallery')">Gallery</li>
+            <li class="font-size-sm" onclick="ScrollTo('blog')">Blog</li>
+            <li class="font-size-sm" onclick="ScrollTo('Contact-us')">
+              Contact us
             </li>
-            <li>
-              <a href="#" class="font-size-sm">Blog</a>
-            </li>
-            <li>
-              <a href="#" class="font-size-sm">Contact us</a>
-            </li>
-            <li class="search-pos search-input-md">
-              <a
-                href="#"
-                onclick="ShowOrHide( SearchShow , SearchHide , SearchInputMd )"
-              >
-                <i class="fas bi bi-search search-icon"></i>
-              </a>
+            <li
+              class="search-pos search-input-md"
+              onclick="ShowOrHide( SearchShow , SearchHide , SearchInputMd )"
+            >
+              <i class="fas bi bi-search search-icon"></i>
+
               <input
                 type="search"
                 placeholder="Search"
@@ -151,7 +150,10 @@
           </button>
         </div>
       </section>
-      <a href="#"><i class="fas fa-chevron-down angle-down"></i></a>
+      <i
+        class="fas fa-chevron-down angle-down"
+        onclick="ScrollTo('cat-available')"
+      ></i>
     </header>
 
     <main>
@@ -359,11 +361,12 @@
       </section>
 
       <section class="contact-us">
+        <h2 class="w-100">Contact Us</h2>
         <div class="img-contact-us">
           <img src="Images/Contact-us.jpg" alt="Contact-Us" />
           <h2 class="w-100">
             BRITISH <span class="c-white">SHORTHAIR</span> <br />
-            <span class="bg-white c-gray and-size"> & </span> SCOTTISH
+            <span class="bg-white c-gray Span-size"> & </span> SCOTTISH
             <span class="c-white">FOLD</span>
           </h2>
           <p>Cat Breeder Website</p>
