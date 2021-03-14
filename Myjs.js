@@ -44,6 +44,8 @@ var Numbers = [1, 2, 3, 4];
 var slides = document.getElementById("slide-show");
 var Counter = document.getElementById("counter");
 
+
+
 function ChangeBg(Imagepack, time_Second) {
   var ImgCounter = 0;
   setInterval(function () {
