@@ -1,6 +1,5 @@
 // // javascript codes
 
-window.addEventListener("load", function () {
   var mediaXxl = window.matchMedia("(min-width: 1320.1px)");
   var mediaXl = window.matchMedia(
     "(max-width: 1320px) and (min-width: 960.1px)"
@@ -205,4 +204,4 @@ window.addEventListener("load", function () {
       behavior: "smooth",
     });
   }
-});
+
